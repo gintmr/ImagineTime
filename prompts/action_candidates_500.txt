@@ -1,0 +1,500 @@
+person moves a small object from left to right, wide shot
+person places one item on a table, close-up
+person lifts an object and sets it down, side view
+person sorts items into two piles, overhead view
+person opens and closes a container, handheld camera
+person passes an object to another person, wide shot
+person packs objects into a bag, close-up
+person arranges objects in a row, side view
+person repositions a box near the edge, overhead view
+person keeps one object fixed while moving another, handheld camera
+child moves a small object from left to right, wide shot
+child places one item on a table, close-up
+child lifts an object and sets it down, side view
+child sorts items into two piles, overhead view
+child opens and closes a container, handheld camera
+child passes an object to another person, wide shot
+child packs objects into a bag, close-up
+child arranges objects in a row, side view
+child repositions a box near the edge, overhead view
+child keeps one object fixed while moving another, handheld camera
+chef moves a small object from left to right, wide shot
+chef places one item on a table, close-up
+chef lifts an object and sets it down, side view
+chef sorts items into two piles, overhead view
+chef opens and closes a container, handheld camera
+chef passes an object to another person, wide shot
+chef packs objects into a bag, close-up
+chef arranges objects in a row, side view
+chef repositions a box near the edge, overhead view
+chef keeps one object fixed while moving another, handheld camera
+student moves a small object from left to right, wide shot
+student places one item on a table, close-up
+student lifts an object and sets it down, side view
+student sorts items into two piles, overhead view
+student opens and closes a container, handheld camera
+student passes an object to another person, wide shot
+student packs objects into a bag, close-up
+student arranges objects in a row, side view
+student repositions a box near the edge, overhead view
+student keeps one object fixed while moving another, handheld camera
+mechanic moves a small object from left to right, wide shot
+mechanic places one item on a table, close-up
+mechanic lifts an object and sets it down, side view
+mechanic sorts items into two piles, overhead view
+mechanic opens and closes a container, handheld camera
+mechanic passes an object to another person, wide shot
+mechanic packs objects into a bag, close-up
+mechanic arranges objects in a row, side view
+mechanic repositions a box near the edge, overhead view
+mechanic keeps one object fixed while moving another, handheld camera
+vendor moves a small object from left to right, wide shot
+vendor places one item on a table, close-up
+vendor lifts an object and sets it down, side view
+vendor sorts items into two piles, overhead view
+vendor opens and closes a container, handheld camera
+vendor passes an object to another person, wide shot
+vendor packs objects into a bag, close-up
+vendor arranges objects in a row, side view
+vendor repositions a box near the edge, overhead view
+vendor keeps one object fixed while moving another, handheld camera
+nurse moves a small object from left to right, wide shot
+nurse places one item on a table, close-up
+nurse lifts an object and sets it down, side view
+nurse sorts items into two piles, overhead view
+nurse opens and closes a container, handheld camera
+nurse passes an object to another person, wide shot
+nurse packs objects into a bag, close-up
+nurse arranges objects in a row, side view
+nurse repositions a box near the edge, overhead view
+nurse keeps one object fixed while moving another, handheld camera
+librarian moves a small object from left to right, wide shot
+librarian places one item on a table, close-up
+librarian lifts an object and sets it down, side view
+librarian sorts items into two piles, overhead view
+librarian opens and closes a container, handheld camera
+librarian passes an object to another person, wide shot
+librarian packs objects into a bag, close-up
+librarian arranges objects in a row, side view
+librarian repositions a box near the edge, overhead view
+librarian keeps one object fixed while moving another, handheld camera
+florist moves a small object from left to right, wide shot
+florist places one item on a table, close-up
+florist lifts an object and sets it down, side view
+florist sorts items into two piles, overhead view
+florist opens and closes a container, handheld camera
+florist passes an object to another person, wide shot
+florist packs objects into a bag, close-up
+florist arranges objects in a row, side view
+florist repositions a box near the edge, overhead view
+florist keeps one object fixed while moving another, handheld camera
+barista moves a small object from left to right, wide shot
+barista places one item on a table, close-up
+barista lifts an object and sets it down, side view
+barista sorts items into two piles, overhead view
+barista opens and closes a container, handheld camera
+barista passes an object to another person, wide shot
+barista packs objects into a bag, close-up
+barista arranges objects in a row, side view
+barista repositions a box near the edge, overhead view
+barista keeps one object fixed while moving another, handheld camera
+dog moves behind an obstacle and reappears, wide shot
+dog changes direction near a boundary, close-up
+dog crosses from left to right, side view
+dog stops beside a small object, overhead view
+dog jumps over a low obstacle, handheld camera
+dog circles around a landmark, wide shot
+dog enters from one side and exits the other, close-up
+dog pauses before moving again, side view
+dog moves from foreground to background, overhead view
+dog keeps a single path across the scene, handheld camera
+cat moves behind an obstacle and reappears, wide shot
+cat changes direction near a boundary, close-up
+cat crosses from left to right, side view
+cat stops beside a small object, overhead view
+cat jumps over a low obstacle, handheld camera
+cat circles around a landmark, wide shot
+cat enters from one side and exits the other, close-up
+cat pauses before moving again, side view
+cat moves from foreground to background, overhead view
+cat keeps a single path across the scene, handheld camera
+horse moves behind an obstacle and reappears, wide shot
+horse changes direction near a boundary, close-up
+horse crosses from left to right, side view
+horse stops beside a small object, overhead view
+horse jumps over a low obstacle, handheld camera
+horse circles around a landmark, wide shot
+horse enters from one side and exits the other, close-up
+horse pauses before moving again, side view
+horse moves from foreground to background, overhead view
+horse keeps a single path across the scene, handheld camera
+bird moves behind an obstacle and reappears, wide shot
+bird changes direction near a boundary, close-up
+bird crosses from left to right, side view
+bird stops beside a small object, overhead view
+bird jumps over a low obstacle, handheld camera
+bird circles around a landmark, wide shot
+bird enters from one side and exits the other, close-up
+bird pauses before moving again, side view
+bird moves from foreground to background, overhead view
+bird keeps a single path across the scene, handheld camera
+fish moves behind an obstacle and reappears, wide shot
+fish changes direction near a boundary, close-up
+fish crosses from left to right, side view
+fish stops beside a small object, overhead view
+fish jumps over a low obstacle, handheld camera
+fish circles around a landmark, wide shot
+fish enters from one side and exits the other, close-up
+fish pauses before moving again, side view
+fish moves from foreground to background, overhead view
+fish keeps a single path across the scene, handheld camera
+goose moves behind an obstacle and reappears, wide shot
+goose changes direction near a boundary, close-up
+goose crosses from left to right, side view
+goose stops beside a small object, overhead view
+goose jumps over a low obstacle, handheld camera
+goose circles around a landmark, wide shot
+goose enters from one side and exits the other, close-up
+goose pauses before moving again, side view
+goose moves from foreground to background, overhead view
+goose keeps a single path across the scene, handheld camera
+squirrel moves behind an obstacle and reappears, wide shot
+squirrel changes direction near a boundary, close-up
+squirrel crosses from left to right, side view
+squirrel stops beside a small object, overhead view
+squirrel jumps over a low obstacle, handheld camera
+squirrel circles around a landmark, wide shot
+squirrel enters from one side and exits the other, close-up
+squirrel pauses before moving again, side view
+squirrel moves from foreground to background, overhead view
+squirrel keeps a single path across the scene, handheld camera
+rabbit moves behind an obstacle and reappears, wide shot
+rabbit changes direction near a boundary, close-up
+rabbit crosses from left to right, side view
+rabbit stops beside a small object, overhead view
+rabbit jumps over a low obstacle, handheld camera
+rabbit circles around a landmark, wide shot
+rabbit enters from one side and exits the other, close-up
+rabbit pauses before moving again, side view
+rabbit moves from foreground to background, overhead view
+rabbit keeps a single path across the scene, handheld camera
+frog moves behind an obstacle and reappears, wide shot
+frog changes direction near a boundary, close-up
+frog crosses from left to right, side view
+frog stops beside a small object, overhead view
+frog jumps over a low obstacle, handheld camera
+frog circles around a landmark, wide shot
+frog enters from one side and exits the other, close-up
+frog pauses before moving again, side view
+frog moves from foreground to background, overhead view
+frog keeps a single path across the scene, handheld camera
+butterfly moves behind an obstacle and reappears, wide shot
+butterfly changes direction near a boundary, close-up
+butterfly crosses from left to right, side view
+butterfly stops beside a small object, overhead view
+butterfly jumps over a low obstacle, handheld camera
+butterfly circles around a landmark, wide shot
+butterfly enters from one side and exits the other, close-up
+butterfly pauses before moving again, side view
+butterfly moves from foreground to background, overhead view
+butterfly keeps a single path across the scene, handheld camera
+car enters an intersection and turns, wide shot
+car stops near the curb, close-up
+car passes behind another vehicle, side view
+car moves from left to right, overhead view
+car waits before starting again, handheld camera
+car changes lane once, wide shot
+car approaches and leaves a marker, close-up
+car slows and then accelerates, side view
+car parks near the edge, overhead view
+car keeps route direction consistent, handheld camera
+bus enters an intersection and turns, wide shot
+bus stops near the curb, close-up
+bus passes behind another vehicle, side view
+bus moves from left to right, overhead view
+bus waits before starting again, handheld camera
+bus changes lane once, wide shot
+bus approaches and leaves a marker, close-up
+bus slows and then accelerates, side view
+bus parks near the edge, overhead view
+bus keeps route direction consistent, handheld camera
+train enters an intersection and turns, wide shot
+train stops near the curb, close-up
+train passes behind another vehicle, side view
+train moves from left to right, overhead view
+train waits before starting again, handheld camera
+train changes lane once, wide shot
+train approaches and leaves a marker, close-up
+train slows and then accelerates, side view
+train parks near the edge, overhead view
+train keeps route direction consistent, handheld camera
+boat enters an intersection and turns, wide shot
+boat stops near the curb, close-up
+boat passes behind another vehicle, side view
+boat moves from left to right, overhead view
+boat waits before starting again, handheld camera
+boat changes lane once, wide shot
+boat approaches and leaves a marker, close-up
+boat slows and then accelerates, side view
+boat parks near the edge, overhead view
+boat keeps route direction consistent, handheld camera
+bicycle enters an intersection and turns, wide shot
+bicycle stops near the curb, close-up
+bicycle passes behind another vehicle, side view
+bicycle moves from left to right, overhead view
+bicycle waits before starting again, handheld camera
+bicycle changes lane once, wide shot
+bicycle approaches and leaves a marker, close-up
+bicycle slows and then accelerates, side view
+bicycle parks near the edge, overhead view
+bicycle keeps route direction consistent, handheld camera
+scooter enters an intersection and turns, wide shot
+scooter stops near the curb, close-up
+scooter passes behind another vehicle, side view
+scooter moves from left to right, overhead view
+scooter waits before starting again, handheld camera
+scooter changes lane once, wide shot
+scooter approaches and leaves a marker, close-up
+scooter slows and then accelerates, side view
+scooter parks near the edge, overhead view
+scooter keeps route direction consistent, handheld camera
+drone enters an intersection and turns, wide shot
+drone stops near the curb, close-up
+drone passes behind another vehicle, side view
+drone moves from left to right, overhead view
+drone waits before starting again, handheld camera
+drone changes lane once, wide shot
+drone approaches and leaves a marker, close-up
+drone slows and then accelerates, side view
+drone parks near the edge, overhead view
+drone keeps route direction consistent, handheld camera
+truck enters an intersection and turns, wide shot
+truck stops near the curb, close-up
+truck passes behind another vehicle, side view
+truck moves from left to right, overhead view
+truck waits before starting again, handheld camera
+truck changes lane once, wide shot
+truck approaches and leaves a marker, close-up
+truck slows and then accelerates, side view
+truck parks near the edge, overhead view
+truck keeps route direction consistent, handheld camera
+kayak enters an intersection and turns, wide shot
+kayak stops near the curb, close-up
+kayak passes behind another vehicle, side view
+kayak moves from left to right, overhead view
+kayak waits before starting again, handheld camera
+kayak changes lane once, wide shot
+kayak approaches and leaves a marker, close-up
+kayak slows and then accelerates, side view
+kayak parks near the edge, overhead view
+kayak keeps route direction consistent, handheld camera
+skateboard enters an intersection and turns, wide shot
+skateboard stops near the curb, close-up
+skateboard passes behind another vehicle, side view
+skateboard moves from left to right, overhead view
+skateboard waits before starting again, handheld camera
+skateboard changes lane once, wide shot
+skateboard approaches and leaves a marker, close-up
+skateboard slows and then accelerates, side view
+skateboard parks near the edge, overhead view
+skateboard keeps route direction consistent, handheld camera
+ball opens partially then fully, wide shot
+ball moves from one surface to another, close-up
+ball fills or empties gradually, side view
+ball rolls until stopping, overhead view
+ball slides across the table, handheld camera
+ball tilts and returns upright, wide shot
+ball changes position by one step, close-up
+ball stays fixed while surroundings change, side view
+ball is counted among several objects, overhead view
+ball is carried and set down, handheld camera
+box opens partially then fully, wide shot
+box moves from one surface to another, close-up
+box fills or empties gradually, side view
+box rolls until stopping, overhead view
+box slides across the table, handheld camera
+box tilts and returns upright, wide shot
+box changes position by one step, close-up
+box stays fixed while surroundings change, side view
+box is counted among several objects, overhead view
+box is carried and set down, handheld camera
+cup opens partially then fully, wide shot
+cup moves from one surface to another, close-up
+cup fills or empties gradually, side view
+cup rolls until stopping, overhead view
+cup slides across the table, handheld camera
+cup tilts and returns upright, wide shot
+cup changes position by one step, close-up
+cup stays fixed while surroundings change, side view
+cup is counted among several objects, overhead view
+cup is carried and set down, handheld camera
+glass opens partially then fully, wide shot
+glass moves from one surface to another, close-up
+glass fills or empties gradually, side view
+glass rolls until stopping, overhead view
+glass slides across the table, handheld camera
+glass tilts and returns upright, wide shot
+glass changes position by one step, close-up
+glass stays fixed while surroundings change, side view
+glass is counted among several objects, overhead view
+glass is carried and set down, handheld camera
+book opens partially then fully, wide shot
+book moves from one surface to another, close-up
+book fills or empties gradually, side view
+book rolls until stopping, overhead view
+book slides across the table, handheld camera
+book tilts and returns upright, wide shot
+book changes position by one step, close-up
+book stays fixed while surroundings change, side view
+book is counted among several objects, overhead view
+book is carried and set down, handheld camera
+door opens partially then fully, wide shot
+door moves from one surface to another, close-up
+door fills or empties gradually, side view
+door rolls until stopping, overhead view
+door slides across the table, handheld camera
+door tilts and returns upright, wide shot
+door changes position by one step, close-up
+door stays fixed while surroundings change, side view
+door is counted among several objects, overhead view
+door is carried and set down, handheld camera
+window blinds opens partially then fully, wide shot
+window blinds moves from one surface to another, close-up
+window blinds fills or empties gradually, side view
+window blinds rolls until stopping, overhead view
+window blinds slides across the table, handheld camera
+window blinds tilts and returns upright, wide shot
+window blinds changes position by one step, close-up
+window blinds stays fixed while surroundings change, side view
+window blinds is counted among several objects, overhead view
+window blinds is carried and set down, handheld camera
+lamp opens partially then fully, wide shot
+lamp moves from one surface to another, close-up
+lamp fills or empties gradually, side view
+lamp rolls until stopping, overhead view
+lamp slides across the table, handheld camera
+lamp tilts and returns upright, wide shot
+lamp changes position by one step, close-up
+lamp stays fixed while surroundings change, side view
+lamp is counted among several objects, overhead view
+lamp is carried and set down, handheld camera
+plant opens partially then fully, wide shot
+plant moves from one surface to another, close-up
+plant fills or empties gradually, side view
+plant rolls until stopping, overhead view
+plant slides across the table, handheld camera
+plant tilts and returns upright, wide shot
+plant changes position by one step, close-up
+plant stays fixed while surroundings change, side view
+plant is counted among several objects, overhead view
+plant is carried and set down, handheld camera
+suitcase opens partially then fully, wide shot
+suitcase moves from one surface to another, close-up
+suitcase fills or empties gradually, side view
+suitcase rolls until stopping, overhead view
+suitcase slides across the table, handheld camera
+suitcase tilts and returns upright, wide shot
+suitcase changes position by one step, close-up
+suitcase stays fixed while surroundings change, side view
+suitcase is counted among several objects, overhead view
+suitcase is carried and set down, handheld camera
+clouds moves in a line, wide shot
+clouds splits and then regroups, close-up
+clouds changes spacing over time, side view
+clouds passes from foreground to background, overhead view
+clouds enters and exits as a group, handheld camera
+clouds remains evenly spaced, wide shot
+clouds forms a cluster then spreads out, close-up
+clouds holds count at three, four, or five, side view
+clouds crosses a boundary, overhead view
+clouds stays near the same area, handheld camera
+waves moves in a line, wide shot
+waves splits and then regroups, close-up
+waves changes spacing over time, side view
+waves passes from foreground to background, overhead view
+waves enters and exits as a group, handheld camera
+waves remains evenly spaced, wide shot
+waves forms a cluster then spreads out, close-up
+waves holds count at three, four, or five, side view
+waves crosses a boundary, overhead view
+waves stays near the same area, handheld camera
+market stall moves in a line, wide shot
+market stall splits and then regroups, close-up
+market stall changes spacing over time, side view
+market stall passes from foreground to background, overhead view
+market stall enters and exits as a group, handheld camera
+market stall remains evenly spaced, wide shot
+market stall forms a cluster then spreads out, close-up
+market stall holds count at three, four, or five, side view
+market stall crosses a boundary, overhead view
+market stall stays near the same area, handheld camera
+hiking trail moves in a line, wide shot
+hiking trail splits and then regroups, close-up
+hiking trail changes spacing over time, side view
+hiking trail passes from foreground to background, overhead view
+hiking trail enters and exits as a group, handheld camera
+hiking trail remains evenly spaced, wide shot
+hiking trail forms a cluster then spreads out, close-up
+hiking trail holds count at three, four, or five, side view
+hiking trail crosses a boundary, overhead view
+hiking trail stays near the same area, handheld camera
+festival crowd moves in a line, wide shot
+festival crowd splits and then regroups, close-up
+festival crowd changes spacing over time, side view
+festival crowd passes from foreground to background, overhead view
+festival crowd enters and exits as a group, handheld camera
+festival crowd remains evenly spaced, wide shot
+festival crowd forms a cluster then spreads out, close-up
+festival crowd holds count at three, four, or five, side view
+festival crowd crosses a boundary, overhead view
+festival crowd stays near the same area, handheld camera
+flock of geese moves in a line, wide shot
+flock of geese splits and then regroups, close-up
+flock of geese changes spacing over time, side view
+flock of geese passes from foreground to background, overhead view
+flock of geese enters and exits as a group, handheld camera
+flock of geese remains evenly spaced, wide shot
+flock of geese forms a cluster then spreads out, close-up
+flock of geese holds count at three, four, or five, side view
+flock of geese crosses a boundary, overhead view
+flock of geese stays near the same area, handheld camera
+three robots moves in a line, wide shot
+three robots splits and then regroups, close-up
+three robots changes spacing over time, side view
+three robots passes from foreground to background, overhead view
+three robots enters and exits as a group, handheld camera
+three robots remains evenly spaced, wide shot
+three robots forms a cluster then spreads out, close-up
+three robots holds count at three, four, or five, side view
+three robots crosses a boundary, overhead view
+three robots stays near the same area, handheld camera
+four birds moves in a line, wide shot
+four birds splits and then regroups, close-up
+four birds changes spacing over time, side view
+four birds passes from foreground to background, overhead view
+four birds enters and exits as a group, handheld camera
+four birds remains evenly spaced, wide shot
+four birds forms a cluster then spreads out, close-up
+four birds holds count at three, four, or five, side view
+four birds crosses a boundary, overhead view
+four birds stays near the same area, handheld camera
+two kayakers moves in a line, wide shot
+two kayakers splits and then regroups, close-up
+two kayakers changes spacing over time, side view
+two kayakers passes from foreground to background, overhead view
+two kayakers enters and exits as a group, handheld camera
+two kayakers remains evenly spaced, wide shot
+two kayakers forms a cluster then spreads out, close-up
+two kayakers holds count at three, four, or five, side view
+two kayakers crosses a boundary, overhead view
+two kayakers stays near the same area, handheld camera
+five apples moves in a line, wide shot
+five apples splits and then regroups, close-up
+five apples changes spacing over time, side view
+five apples passes from foreground to background, overhead view
+five apples enters and exits as a group, handheld camera
+five apples remains evenly spaced, wide shot
+five apples forms a cluster then spreads out, close-up
+five apples holds count at three, four, or five, side view
+five apples crosses a boundary, overhead view
+five apples stays near the same area, handheld camera

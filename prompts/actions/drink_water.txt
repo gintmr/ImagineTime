@@ -1,0 +1,11 @@
+Generate a motion sheet showing the same reference person drinking water from a cup in one continuous action sequence. The person, cup, table, room, camera viewpoint, lighting, and clothing should remain consistent across all cells.
+
+Stage 1: The person is near the table with the cup resting on the table. The person notices the cup and prepares to reach for it.
+
+Stage 2: The person reaches for the cup, grasps it, and lifts it from the table.
+
+Stage 3: The person moves the cup to the mouth and drinks water from it. The cup should reach the mouth only in this stage.
+
+Stage 4: The person lowers the cup after drinking and places it back on the table or holds it lower near the table.
+
+Logical requirements: the cup must not reach the mouth before Stage 3; the cup must be lifted before drinking; the final stage must clearly occur after drinking.

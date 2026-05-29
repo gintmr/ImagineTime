@@ -1,0 +1,11 @@
+Generate a motion sheet showing the same reference person opening a drawer and taking out a small object in one continuous action sequence. The person, drawer, object, room, camera viewpoint, lighting, and clothing should remain consistent across all cells.
+
+Stage 1: The person stands or sits in front of a closed drawer and looks toward the drawer.
+
+Stage 2: The person reaches for the drawer handle and pulls the drawer open.
+
+Stage 3: The person reaches into the open drawer and grasps a small object inside it.
+
+Stage 4: The person removes the object from the drawer and holds it visibly outside the drawer.
+
+Logical requirements: the drawer must be closed in Stage 1; the object must not appear in the hand before the drawer is open; the object must be removed only after the person reaches into the drawer.

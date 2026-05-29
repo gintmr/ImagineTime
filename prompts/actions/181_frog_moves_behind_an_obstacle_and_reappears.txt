@@ -1,0 +1,11 @@
+Generate a motion sheet showing one continuous action sequence: frog moves behind an obstacle and reappears. Use a wide shot viewpoint. The subject, relevant objects, scene layout, camera viewpoint, lighting, and visual style should remain consistent across all cells.
+
+Stage 1: The scene establishes the initial state before the main action begins. The subject, relevant objects, boundaries, and starting spatial positions should be clearly visible.
+
+Stage 2: The action begins from the established position: frog moves behind an obstacle and reappears. The first spatial change should be clear and should follow naturally from Stage 1.
+
+Stage 3: The action continues through the main transitional state: frog moves behind an obstacle and reappears. The subject or object should remain trackable, with no sudden jump to an unrelated location.
+
+Stage 4: The action reaches its final state after the transition. The final position, count, and spatial relationship should logically follow from the previous stages.
+
+Logical requirements: the initial state must appear before the transition; the main action must progress through the middle stages; the final state must clearly follow from the previous stage; identity, object count, relative spatial layout, and temporal order must remain consistent across the grid.
