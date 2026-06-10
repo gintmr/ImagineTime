@@ -45,12 +45,13 @@ examples_by_domain/
 If you use ImagineTime, please cite the paper:
 
 ```bibtex
-@misc{imagetime2026,
-  title        = {Can Image Models Imagine Time?},
-  year         = {2026},
-  eprint       = {2606.10620},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.CV},
-  url          = {https://arxiv.org/abs/2606.10620}
+@misc{wu2026imagemodelsimaginetime,
+      title={Can Image Models Imagine Time? ImageTime: A Novel Benchmark for Probing Visual World Modeling Through Spatiotemporal Consistency}, 
+      author={Xinrui Wu and Lichen Huang},
+      year={2026},
+      eprint={2606.10620},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.10620}, 
 }
 ```
