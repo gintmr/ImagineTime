@@ -1,0 +1,12 @@
+.DS_Store
+.secrets/
+.env
+__pycache__/
+*.pyc
+.pycache/
+.history/
+.codex_cli_home/
+Self_Guide/
+To_HuggingFace/
+benchmark_data/
+*.log

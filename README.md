@@ -1,37 +1,56 @@
-# ImagineTime / GridFrameBench Workspace
+# Can Image Models Imagine Time?
 
-This repository is organized around one goal: build a benchmark dataset for evaluating whether image generation models can create reference-conditioned, stage-controllable, editable motion sheets.
+This repository hosts the public release materials for the paper **“Can Image Models Imagine Time? ImageTime: A Novel Benchmark for Probing Visual World Modeling Through Spatiotemporal Consistency”**
 
-## Main Modules
+- Paper: [arXiv:2606.10620](https://arxiv.org/abs/2606.10620)
+- Dataset: [Xin-Rui/ImageTime_Benchmark](https://huggingface.co/datasets/Xin-Rui/ImageTime_Benchmark)
+
+<p align="center">
+  <img src="assets/Intro.png" alt="ImagineTime Intro" width="95%">
+</p>
+
+## Overview
+
+**ImagineTime** is a benchmark for evaluating whether image generation models can produce temporally ordered 2x2 motion sheets with coherent entities, spatial relations, state transitions, and causal constraints.
+
+This GitHub repository contains the lightweight public materials for the paper:
+
+- evaluation prompts and scoring rubrics;
+- C and D capability/diagnostic criteria;
+- one representative prompt example for each of the 22 domains;
+- pointers to the full benchmark release on Hugging Face.
+
+The full benchmark package is available on Hugging Face Datasets and includes 750 cases, prompt-only generations from eight models, VLM score files, aggregate summaries, reference images, and scaffold templates.
+
+## Resources
+
+- Paper: https://arxiv.org/abs/2606.10620
+- Hugging Face dataset: https://huggingface.co/datasets/Xin-Rui/ImageTime_Benchmark
+
+## Repository Layout
 
 ```text
-codex_cli_workflows/
-  Codex CLI-only automation for generating assets and scoring images.
+assets/
+  Intro figure for the paper and benchmark.
 
-project_planning/
-  Human-authored benchmark design, capability taxonomy, scenario taxonomy, and workflow plans.
+evaluation_prompt/
+  Public VLM-as-judge prompt and C0-C9 ability rubric.
 
-prompts/
-  Prompt assets that are fed to generation models, VLM judges, or Codex CLI workflows.
-
-benchmark_data/
-  Generated benchmark data, references, model generations, evaluations, and manifests.
-
-docs/
-  Higher-level notes, engineering prompts, methodology drafts, and project status reports.
+examples_by_domain/
+  One representative prompt example for each benchmark domain.
 ```
 
-## Current Benchmark Direction
+## Citation
 
-The intended dataset is case-based. Each final case should contain:
+If you use ImagineTime, please cite the paper:
 
-- a structured process specification;
-- a standard process prompt;
-- a consistency-enhanced process prompt;
-- an initial-state reference image;
-- a 2x2 scaffold template with the reference image fixed in the top-left cell;
-- QC records;
-- model outputs under each evaluation setting;
-- VLM-as-judge scores and optional human calibration scores.
-
-The project intentionally separates data construction from model evaluation. Data assets live in `benchmark_data/`; Codex CLI automation lives in `codex_cli_workflows/`; reusable prompts live in `prompts/`.
+```bibtex
+@misc{imagetime2026,
+  title        = {Can Image Models Imagine Time?},
+  year         = {2026},
+  eprint       = {2606.10620},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url          = {https://arxiv.org/abs/2606.10620}
+}
+```
