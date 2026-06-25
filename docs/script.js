@@ -92,6 +92,7 @@
   });
   /* ---------- domain filter ---------- */
   var filterWrap = document.getElementById("gal-filter");
+  var galGrid = document.getElementById("domain-gallery");
   if (filterWrap) {
     filterWrap.addEventListener("click", function (e) {
       var b = e.target.closest("button");
@@ -103,7 +104,42 @@
       document.querySelectorAll("#domain-gallery .gcard").forEach(function (c) {
         c.classList.toggle("hide", d !== "all" && c.getAttribute("data-domain") !== d);
       });
+      // dense contact-sheet when showing everything; roomy captioned grid per domain
+      if (galGrid) {
+        galGrid.classList.toggle("dense", d === "all");
+        galGrid.classList.toggle("cols3", d !== "all");
+      }
     });
+  }
+
+  /* ---------- figure album ---------- */
+  var album = document.getElementById("fig-album");
+  if (album) {
+    var tabs = Array.prototype.slice.call(album.querySelectorAll("#album-tabs button"));
+    var aImg = document.getElementById("album-img");
+    var aTitle = document.getElementById("album-title");
+    var aIdx = document.getElementById("album-idx");
+    var aTotal = document.getElementById("album-total");
+    var aCap = document.getElementById("album-cap");
+    var cur = 0;
+    if (aTotal) aTotal.textContent = tabs.length;
+    function showFig(i) {
+      cur = (i + tabs.length) % tabs.length;
+      var b = tabs[cur];
+      aImg.setAttribute("src", b.getAttribute("data-src"));
+      aImg.setAttribute("alt", b.getAttribute("data-title"));
+      aTitle.textContent = b.getAttribute("data-title");
+      aCap.textContent = b.getAttribute("data-cap");
+      if (aIdx) aIdx.textContent = cur + 1;
+      tabs.forEach(function (t) { t.classList.toggle("active", t === b); });
+    }
+    tabs.forEach(function (t, i) { t.addEventListener("click", function () { showFig(i); }); });
+    var aPrev = document.getElementById("album-prev");
+    var aNext = document.getElementById("album-next");
+    if (aPrev) aPrev.addEventListener("click", function () { showFig(cur - 1); });
+    if (aNext) aNext.addEventListener("click", function () { showFig(cur + 1); });
+    if (aImg) aImg.addEventListener("click", function () { openLightbox(aImg.getAttribute("src"), aTitle.textContent); });
+    showFig(0);
   }
 
   if (lbClose) lbClose.addEventListener("click", closeLightbox);

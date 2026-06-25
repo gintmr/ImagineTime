@@ -373,6 +373,45 @@ section.block.tight { padding: 64px 0; }
 .gal-filter button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 .gcard.hide { display: none; }
 
+/* dense contact-sheet mode (shown when "All" is selected) */
+.gal-grid.dense { grid-template-columns: repeat(auto-fill, minmax(178px, 1fr)); gap: 10px; }
+.gal-grid.dense .gcard { border-radius: 9px; }
+.gal-grid.dense .gcap { display: none; }
+
+/* ============================================================
+   FIGURE ALBUM (flip-through viewer)
+   ============================================================ */
+.album { margin-top: 34px; }
+.album-stage {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); padding: 24px; min-height: 360px;
+}
+.album-stage img {
+  max-height: 58vh; max-width: 100%; width: auto; object-fit: contain; cursor: zoom-in;
+  border-radius: 6px;
+}
+.album-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-2);
+  background: color-mix(in srgb, var(--panel) 86%, transparent); color: var(--ink);
+  font-size: 1.5rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color .12s ease, background .12s ease;
+}
+.album-nav:hover { border-color: var(--ink); background: var(--panel); }
+.album-nav.prev { left: 16px; }
+.album-nav.next { right: 16px; }
+.album-tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 18px; border-top: 1px solid var(--line); }
+.album-tabs button {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .02em;
+  border: 1px solid var(--line-2); background: var(--bg); color: var(--ink-2);
+  padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  transition: background .12s ease, color .12s ease, border-color .12s ease;
+}
+.album-tabs button:hover { color: var(--ink); border-color: var(--ink); }
+.album-tabs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.album-cap { margin-top: 14px; }
+
 /* ============================================================
    CITATION
    ============================================================ */
