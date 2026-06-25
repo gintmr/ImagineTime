@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImageTime — Can Image Models Imagine Time?</title>
+<meta name="description" content="ImageTime is a diagnostic benchmark probing visual world modeling in image generation models through spatiotemporal consistency: 750 cases, 22 domains, an L0–L6 capability tree, and 8 models evaluated.">
+<meta name="author" content="Xinrui Wu, Lichen Huang">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Can Image Models Imagine Time? — ImageTime Benchmark">
+<meta property="og:description" content="A diagnostic benchmark probing visual world modeling through spatiotemporal consistency. 750 cases · 22 domains · L0–L6 capability tree · 8 models.">
+<meta property="og:image" content="assets/teaser.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opt,wght@0,16..72,400;0,16..72,500;0,16..72,600;1,16..72,400;1,16..72,500;1,16..72,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================== NAV ============================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <span class="brand">Image<em>Time</em></span>
+    <nav class="nav-links">
+      <a href="#question">Motivation</a>
+      <a href="#challenge">Benchmark</a>
+      <a href="#tree">Capability Tree</a>
+      <a href="#results">Results</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#cite">Cite</a>
+    </nav>
+    <div class="nav-right">
+      <button class="btn icon-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" id="theme-icon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+      <a class="btn btn-dark nav-cta" href="https://arxiv.org/abs/2606.10620" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h11l5 5v11a0 0 0 0 1 0 0H4z"/><path d="M14 4v6h6"/></svg>
+        <span class="nav-cta-text">Paper</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================== HERO ============================== -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">A diagnostic benchmark · visual world modeling</p>
+    <h1>Can image models<span class="l2">imagine time?</span></h1>
+    <p class="lead">
+      Image generators now paint stunning single frames — but can they hold a
+      <strong>coherent visual world across multiple states in one picture</strong>?
+      <b>ImageTime</b> asks a model to draw a single image of four ordered key states and
+      probes whether identities, objects, spatial relations, and causal order survive over time.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-dark" href="https://arxiv.org/abs/2606.10620" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h11l5 5v11H4z"/><path d="M14 4v6h6"/></svg>
+        Read the Paper
+      </a>
+      <a class="btn" href="https://github.com/gintmr/ImagineTime" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.555-1.11-4.555-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        Code
+      </a>
+      <a class="btn" href="https://huggingface.co/datasets/gintmr/ImagineTime" target="_blank" rel="noopener">
+        🤗 Dataset
+      </a>
+      <a class="btn" href="https://www.alphaxiv.org/abs/2606.10620" target="_blank" rel="noopener">
+        alphaXiv
+      </a>
+    </div>
+
+    <div class="authors">
+      <div class="names">
+        <a href="mailto:xinruiwu.wxr@gmail.com">Xinrui Wu</a><sup>1*</sup> &nbsp;
+        <a href="mailto:xhghlc@gmail.com">Lichen Huang</a><sup>1*</sup>
+      </div>
+      <div class="aff"><sup>1</sup>University of Electronic Science and Technology of China &nbsp;·&nbsp; <sup>*</sup>Equal contribution</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TEASER PANEL ============================== -->
+<div class="wrap">
+  <div class="panel teaser-panel reveal">
+    <div class="panel-head">
+      <span>The ImageTime Benchmark</span>
+      <span class="r">750 cases · 22 domains · 8 models</span>
+    </div>
+    <img src="assets/teaser.jpg" alt="ImageTime benchmark overview: thousands of generated motion sheets across 22 domains">
+  </div>
+</div>
+
+<!-- ============================== STATS ============================== -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-head">
+      <span>At a glance</span>
+      <span class="sync">prompt-only · single generation · no cherry-picking <i class="dot"></i></span>
+    </div>
+    <div class="stat-grid">
+      <div class="stat reveal"><div class="num">750</div><div class="lab">benchmark cases</div></div>
+      <div class="stat reveal"><div class="num">22</div><div class="lab">domains</div></div>
+      <div class="stat reveal"><div class="num">375</div><div class="lab">action concepts</div></div>
+      <div class="stat reveal"><div class="num">8</div><div class="lab">models evaluated</div></div>
+    </div>
+    <div class="stat-sub reveal">
+      <span class="chip"><b>4</b> ordered key states / image</span>
+      <span class="chip"><b>L0–L6</b> capability tree</span>
+      <span class="chip"><b>C0–C9</b> capability scores</span>
+      <span class="chip"><b>D0–D14</b> diagnostic subscores</span>
+      <span class="chip"><b>GPT-5.5</b> VLM-as-judge</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== MOTIVATION ============================== -->
+<section class="block" id="question">
+  <div class="wrap two-col">
+    <div>
+      <p class="kicker">The question</p>
+      <blockquote class="pullquote">
+        We've long assumed image models render <span class="q-accent">how things look</span>,
+        and video models render <span class="q-accent">how things change</span>.
+        This generation of image models is quietly blurring that line.
+      </blockquote>
+    </div>
+    <div class="prose">
+      <p>Ask a strong model to draw “open a drawer → reach in → take out an object” as four stages in <strong>one image</strong>, and it doesn't just paint four pretty pictures — it keeps the object from appearing in the hand <strong>before</strong> the drawer is open. In static pixels, it maintains a world with order and causality.</p>
+      <p>But existing text-to-image benchmarks mostly score a <strong>single image</strong>: right objects, attributes, counts, layout. The moment a task involves <strong>change over time</strong>, that lens is easy to fool — a model can jump straight to the result, copy-paste a frame, conjure objects from nowhere, or let an effect precede its cause. Each frame looks fine alone; only the ordered process exposes the failure.</p>
+      <p>So instead of generating dense video and evaluating that, ImageTime forces the model to <strong>draw time into one checkable static image</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CHALLENGE ============================== -->
+<section class="block tight" id="challenge" style="background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <p class="eyebrow">The task</p>
+    <h2 class="section-title">One image, <em>four ordered states</em>.</h2>
+    <p class="lead">Given an action instruction — and optionally a reference image for the initial state — a model must produce a single image laid out as a 2×2 <b>motion sheet</b>:</p>
+
+    <div class="stat-sub" style="margin:24px 0 6px;">
+      <span class="chip"><b>t₁</b> initial state</span>
+      <span class="chip"><b>t₂</b> action onset</span>
+      <span class="chip"><b>t₃</b> transition</span>
+      <span class="chip"><b>t₄</b> final state</span>
+    </div>
+
+    <div class="panel reveal" style="margin-top:34px;">
+      <div class="panel-head">
+        <span>The challenge — 4-keyframe spatiotemporal consistency</span>
+        <span class="r">5 diagnosed failure modes</span>
+      </div>
+      <img src="assets/challenge.jpg" alt="ImageTime task interface: a detailed prompt, four ordered key states, and five diagnosed failure modes, with the L0–L6 capability tree">
+    </div>
+
+    <div class="fails">
+      <div class="fail reveal"><span class="bad-tag">premature final state</span><div class="fail-name">Result before cause</div><p>The outcome appears before the necessary actions ever happen.</p></div>
+      <div class="fail reveal"><span class="bad-tag">missing interaction</span><div class="fail-name">No real contact</div><p>The key interaction (the hit, the grasp, the touch) is skipped.</p></div>
+      <div class="fail reveal"><span class="bad-tag">identity / scene drift</span><div class="fail-name">World not preserved</div><p>The subject's face, the background, or the camera silently changes.</p></div>
+      <div class="fail reveal"><span class="bad-tag">object duplication</span><div class="fail-name">Counts break</div><p>Objects appear or vanish; quantities aren't conserved across frames.</p></div>
+      <div class="fail reveal"><span class="bad-tag">causal-order violation</span><div class="fail-name">Effect precedes cause</div><p>A reward shows up before the event that should produce it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CAPABILITY TREE ============================== -->
+<section class="block" id="tree">
+  <div class="wrap">
+    <p class="eyebrow">How we score</p>
+    <h2 class="section-title">A seven-level <em>capability tree</em>.</h2>
+    <p class="lead">Rather than one blurry total, ImageTime maps each scenario onto a progressive hierarchy where higher levels depend on the visual promises of lower ones — so you can see <strong>which level a model starts to fail</strong>.</p>
+
+    <div class="tree reveal">
+      <div class="tnode"><span class="lv">L0</span><div class="tname">Static</div><div class="tdesc">Grounding the scene</div><span class="arrow">→</span></div>
+      <div class="tnode"><span class="lv">L1</span><div class="tname">Identity</div><div class="tdesc">Anchors preserved</div><span class="arrow">→</span></div>
+      <div class="tnode"><span class="lv">L2</span><div class="tname">Spatial</div><div class="tdesc">Relations consistent</div><span class="arrow">→</span></div>
+      <div class="tnode"><span class="lv">L3</span><div class="tname">Object</div><div class="tdesc">State transitions</div><span class="arrow">→</span></div>
+      <div class="tnode"><span class="lv">L4</span><div class="tname">Interaction</div><div class="tdesc">Contact & affordance</div><span class="arrow">→</span></div>
+      <div class="tnode"><span class="lv">L5</span><div class="tname">Causal</div><div class="tdesc">Process composition</div><span class="arrow">→</span></div>
+      <div class="tnode"><span class="lv">L6</span><div class="tname">Constraint</div><div class="tdesc">Counterfactual rules</div></div>
+    </div>
+    <p class="tree-note">low-level grounding → … → constrained, evolving causal worlds</p>
+
+    <div class="scales">
+      <div class="scale reveal"><div class="st">C0 – C9</div><div class="sn">Capability scores</div><p>Did the model do it? Layout, entity consistency, spatial coherence, motion continuity, temporal order, causality, interaction, constraint sensitivity, and image quality.</p></div>
+      <div class="scale reveal"><div class="st">D0 – D14</div><div class="sn">Diagnostic subscores</div><p>Why did it succeed or fail? Concrete visual evidence — is the transition visible, are counts conserved, is occlusion consistent — behind every judgement.</p></div>
+      <div class="scale reveal"><div class="st">GPT-5.5</div><div class="sn">Structured VLM-as-judge</div><p>First validates the 2×2 layout, then parses each cell, then emits C/D scores, confidence, and failure labels — so a low score is traceable, not a black box.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== RESULTS ============================== -->
+<section class="block" id="results" style="background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <p class="eyebrow">Leaderboard · prompt-only</p>
+    <h2 class="section-title">Eight models, <em>one honest test</em>.</h2>
+    <p class="lead">No reference image, single generation, no retries or human cherry-picking. Static scenes are easy; maintaining a <strong>constrained, evolving causal world</strong> is hard.</p>
+
+    <div class="results-grid" style="margin-top:42px;">
+      <div>
+        <table class="lb reveal">
+          <thead>
+            <tr><th>Model</th><th>C mean</th><th>D mean</th><th>Overall</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="rank">1</span>GPT Image 2</td><td>7.86</td><td>7.87</td><td><span class="cell-score" style="background:#edaaae">7.86</span></td></tr>
+            <tr><td><span class="rank">2</span>Nano Banana 2</td><td>7.43</td><td>7.47</td><td><span class="cell-score" style="background:#efb3a3">7.45</span></td></tr>
+            <tr><td><span class="rank">3</span>Seedream 5.0 Lite</td><td>7.13</td><td>7.20</td><td><span class="cell-score" style="background:#f1b99b">7.16</span></td></tr>
+            <tr><td><span class="rank">4</span>FLUX.2 Pro</td><td>5.92</td><td>6.28</td><td><span class="cell-score" style="background:#f4d096">6.10</span></td></tr>
+            <tr><td><span class="rank">5</span>Z-Image-Turbo</td><td>5.14</td><td>5.69</td><td><span class="cell-score" style="background:#f6dea1">5.41</span></td></tr>
+            <tr><td><span class="rank">6</span>Qwen-Image-2512</td><td>5.09</td><td>5.55</td><td><span class="cell-score" style="background:#f6e0a2">5.32</span></td></tr>
+            <tr><td><span class="rank">7</span>HunyuanImage-2.1</td><td>4.91</td><td>5.04</td><td><span class="cell-score" style="background:#f7e7a7">4.98</span></td></tr>
+            <tr><td><span class="rank">8</span>SDXL</td><td>1.49</td><td>1.64</td><td><span class="cell-score" style="background:#dbeef7">1.57</span></td></tr>
+          </tbody>
+        </table>
+        <p class="curve-cap">Mean capability (C), diagnostic (D) and overall scores over all 750 cases. Cell shading runs warm (strong) → cool (weak).</p>
+      </div>
+      <div>
+        <div class="panel reveal">
+          <div class="panel-head"><span>Score along the capability tree</span><span class="r">L0 → L6</span></div>
+          <img src="assets/degradation_curve.png" alt="Tree-level degradation curve: every model's score from L0 Static to L6 Constraint, with steep drops at the harder causal and constraint levels">
+        </div>
+        <p class="curve-cap">From static grounding (L0) to constraint reasoning (L6). The strongest models stay flat; weaker ones show clear <strong>upper-tree collapse</strong> — causality and constraints are where things break.</p>
+      </div>
+    </div>
+
+    <!-- findings -->
+    <div class="findings">
+      <div class="finding reveal"><div class="fnum">01</div><h3>Looks ≠ understanding</h3><p>Many models keep high image quality (C9) while motion continuity, temporal order and causality (C4–C6) collapse. We never let pretty pixels compensate for missing causality.</p></div>
+      <div class="finding reveal"><div class="fnum">02</div><h3>Not a closed-source privilege</h3><p>Open models without explicit chain-of-thought (Qwen-Image, Z-Image) still show non-trivial entity preservation, spatial anchoring and ordered state change. They trail the best — but they're in the race.</p></div>
+      <div class="finding reveal"><div class="fnum">03</div><h3>The top of the tree is fragile</h3><p>Almost every weaker model degrades upward: building a static scene is easy; sustaining a constrained, evolving causal world is hard. Failures recur — drift, missing mid-states, premature endings.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== GALLERY: DENSE GRIDS ============================== -->
+<section class="block" id="gallery">
+  <div class="wrap">
+    <p class="eyebrow">Beyond the four-frame interface</p>
+    <h2 class="section-title">They can paint <em>long processes</em>.</h2>
+    <p class="lead">A bonus probe pushes the strongest models past 4 frames into dense 4×2 – 4×8 temporal grids — a whole continuous process rendered in a single static image.</p>
+
+    <div class="gal-grid">
+      <figure class="gcard reveal" data-cap="A cherry-blossom bud blooming — a 4×8 dense temporal grid (GPT Image 2 · Nano Banana 2)">
+        <img src="assets/grids/sakura.jpg" alt="A cherry blossom bud gradually blooming across a 4x8 temporal grid">
+        <figcaption class="gcap"><span>A cherry blossom blooms, frame by frame</span><span class="tag">4×8</span></figcaption>
+      </figure>
+      <figure class="gcard reveal" data-cap="A skateboard jump decomposed into ordered states: run-up, crouch, air, landing">
+        <img src="assets/grids/skate.jpg" alt="A skateboard jump decomposed into a 4x6 sequence of ordered states">
+        <figcaption class="gcap"><span>A skateboard jump, decomposed</span><span class="tag">4×6</span></figcaption>
+      </figure>
+      <figure class="gcard reveal" data-cap="Opening a glowing umbrella on a rainy street — character, scene and lighting stay consistent">
+        <img src="assets/grids/umbrella.jpg" alt="Opening a glowing umbrella on a rainy street, consistent across frames">
+        <figcaption class="gcap"><span>A glowing umbrella, on a rainy street</span><span class="tag">4×2</span></figcaption>
+      </figure>
+      <figure class="gcard reveal" data-cap="A flower gradually blooming over a long horizon — a dense ordered process">
+        <img src="assets/grids/flower.jpg" alt="A flower gradually blooming across a long-horizon 4x8 grid">
+        <figcaption class="gcap"><span>A flower opens, over a long horizon</span><span class="tag">4×8</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== GALLERY: 8-MODEL ============================== -->
+<section class="block tight" style="background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <p class="eyebrow">Side by side</p>
+    <h2 class="section-title">Same prompt, <em>eight motion sheets</em>.</h2>
+    <p class="lead">For one action, every model must draw its own 2×2 sheet. Strong models break the action into a coherent ordered process; weaker ones drift, repeat a stage, or collapse the layout.</p>
+
+    <div class="gal-grid cols3">
+      <figure class="gcard reveal" data-cap="Crack an egg — eight models compared"><img src="assets/gallery/kitchen_egg.jpg" alt="Crack an egg, eight models compared"><figcaption class="gcap"><span>Crack an egg</span><span class="tag">kitchen</span></figcaption></figure>
+      <figure class="gcard reveal" data-cap="Long jump — eight models compared"><img src="assets/gallery/long_jump.jpg" alt="Long jump, eight models compared"><figcaption class="gcap"><span>Long jump</span><span class="tag">sports</span></figcaption></figure>
+      <figure class="gcard reveal" data-cap="A robot opens a door — eight models compared"><img src="assets/gallery/robot_door.jpg" alt="A robot opens a door, eight models compared"><figcaption class="gcap"><span>A robot opens a door</span><span class="tag">machines</span></figcaption></figure>
+      <figure class="gcard reveal" data-cap="A cat crawls into a box — eight models compared"><img src="assets/gallery/cat_box.jpg" alt="A cat crawls into a box, eight models compared"><figcaption class="gcap"><span>A cat crawls into a box</span><span class="tag">occlusion</span></figcaption></figure>
+      <figure class="gcard reveal" data-cap="Pick fruit from a plant — eight models compared"><img src="assets/gallery/pick_fruit.jpg" alt="Pick fruit from a plant, eight models compared"><figcaption class="gcap"><span>Pick fruit from a plant</span><span class="tag">gardening</span></figcaption></figure>
+      <figure class="gcard reveal" data-cap="Take out a product — eight models compared"><img src="assets/gallery/unboxing.jpg" alt="Take a product out of a box, eight models compared"><figcaption class="gcap"><span>Take out a product</span><span class="tag">unboxing</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TAKEAWAY ============================== -->
+<section class="block" id="takeaway">
+  <div class="wrap two-col">
+    <div>
+      <p class="kicker">What it means</p>
+      <blockquote class="pullquote">
+        Your next-generation video model — <span class="q-accent">need it even be a video model?</span>
+      </blockquote>
+    </div>
+    <div class="prose">
+      <p>A careful caveat first: we don't claim to see a “world model” inside these networks. ImageTime is a <strong>behavioral probe</strong> — it watches whether world-model-like consistency is <strong>externalized</strong> into the generated image, not the internal representation.</p>
+      <p>Even so: if an image model can hold a single visual world across frames, understand object state change, and respect temporal and causal order, it becomes a <strong>lightweight way to express a visual process</strong> — storyboard keyframes, robotic action previews, low-cost process-level data.</p>
+      <p>Push the frame count high enough — 30, 60 cells — flip through them, and you've essentially <strong>assembled a video out of one image model's keyframes</strong>. Between image and video generation, perhaps only “frame count” remains.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CITATION ============================== -->
+<section class="block tight" id="cite" style="background:var(--bg-2); border-top:1px solid var(--line);">
+  <div class="wrap">
+    <p class="eyebrow">Citation</p>
+    <h2 class="section-title">Cite <em>ImageTime</em>.</h2>
+    <p class="lead">Our data, generated images, judge scores and scripts are fully open. Check it, reproduce it, push back on it.</p>
+
+    <div class="cite-box reveal">
+      <div class="cite-head">
+        <span>BibTeX</span>
+        <button class="copy-btn" id="copy-cite">Copy</button>
+      </div>
+<pre id="cite-text">@misc{wu2026imagemodelsimaginetime,
+  title        = {Can Image Models Imagine Time? ImageTime: A Novel Benchmark
+                  for Probing Visual World Modeling Through Spatiotemporal Consistency},
+  author       = {Xinrui Wu and Lichen Huang},
+  year         = {2026},
+  eprint       = {2606.10620},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.CV},
+  url          = {https://arxiv.org/abs/2606.10620}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand2">Image<em>Time</em></div>
+      <p>A diagnostic benchmark for probing visual world modeling in image generation through spatiotemporal consistency.</p>
+    </div>
+    <div class="foot-links">
+      <div class="col">
+        <h4>Paper</h4>
+        <a href="https://arxiv.org/abs/2606.10620" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2606.10620" target="_blank" rel="noopener">alphaXiv</a>
+      </div>
+      <div class="col">
+        <h4>Resources</h4>
+        <a href="https://github.com/gintmr/ImagineTime" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://huggingface.co/datasets/gintmr/ImagineTime" target="_blank" rel="noopener">HF Dataset</a>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <a href="mailto:xinruiwu.wxr@gmail.com">Xinrui Wu</a>
+        <a href="mailto:xhghlc@gmail.com">Lichen Huang</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 ImageTime · University of Electronic Science and Technology of China</span>
+    <span>Data released under CC BY-NC 4.0</span>
+  </div>
+</footer>
+
+<!-- ============================== LIGHTBOX ============================== -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
+  <img src="" alt="" id="lb-img">
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
