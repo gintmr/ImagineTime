@@ -133,13 +133,39 @@
       if (aIdx) aIdx.textContent = cur + 1;
       tabs.forEach(function (t) { t.classList.toggle("active", t === b); });
     }
-    tabs.forEach(function (t, i) { t.addEventListener("click", function () { showFig(i); }); });
+    // ----- auto-loop (autoplay), paused on hover / focus / reduced-motion -----
+    var autoTimer = null, hovering = false;
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+    function startAuto() {
+      stopAuto();
+      if (reduceMotion || hovering) return;
+      autoTimer = setInterval(function () { showFig(cur + 1); }, 5000);
+    }
+
+    tabs.forEach(function (t, i) { t.addEventListener("click", function () { showFig(i); startAuto(); }); });
     var aPrev = document.getElementById("album-prev");
     var aNext = document.getElementById("album-next");
-    if (aPrev) aPrev.addEventListener("click", function () { showFig(cur - 1); });
-    if (aNext) aNext.addEventListener("click", function () { showFig(cur + 1); });
-    if (aImg) aImg.addEventListener("click", function () { openLightbox(aImg.getAttribute("src"), aTitle.textContent); });
+    if (aPrev) aPrev.addEventListener("click", function () { showFig(cur - 1); startAuto(); });
+    if (aNext) aNext.addEventListener("click", function () { showFig(cur + 1); startAuto(); });
+    if (aImg) aImg.addEventListener("click", function () { stopAuto(); openLightbox(aImg.getAttribute("src"), aTitle.textContent); });
+
+    // pause autoplay while the viewer is hovered or focused
+    album.addEventListener("mouseenter", function () { hovering = true; stopAuto(); });
+    album.addEventListener("mouseleave", function () { hovering = false; startAuto(); });
+    album.addEventListener("focusin", stopAuto);
+    album.addEventListener("focusout", function () { if (!hovering) startAuto(); });
+
+    // ----- keyboard arrows (when the viewer is hovered or focused) -----
+    document.addEventListener("keydown", function (e) {
+      if (lb && lb.classList.contains("open")) return;
+      if (!(hovering || album.contains(document.activeElement))) return;
+      if (e.key === "ArrowLeft") { showFig(cur - 1); startAuto(); e.preventDefault(); }
+      else if (e.key === "ArrowRight") { showFig(cur + 1); startAuto(); e.preventDefault(); }
+    });
+
     showFig(0);
+    startAuto();
   }
 
   if (lbClose) lbClose.addEventListener("click", closeLightbox);
