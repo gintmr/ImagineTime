@@ -12,8 +12,8 @@
   --muted:     #8a8779;
   --line:      #e6e2d6;
   --line-2:    #d8d3c5;
-  --accent:    #2f39e0;
-  --accent-2:  #232cc0;
+  --accent:    #8257e6;
+  --accent-2:  #6a40cf;
   --hl:        #f6e7a1;
   --good:      #ec9f9a;
   --bad:       #cfe6f4;
@@ -36,8 +36,8 @@
   --muted:     #918d7f;
   --line:      #33301f;
   --line-2:    #3e3a27;
-  --accent:    #8a91ff;
-  --accent-2:  #a5abff;
+  --accent:    #bfa6ff;
+  --accent-2:  #d3c2ff;
   --hl:        #5a5326;
   --good:      #b8635c;
   --bad:       #355a72;
@@ -279,14 +279,14 @@ section.block.tight { padding: 64px 0; }
 .tnode .tname { font-weight: 600; font-size: .96rem; }
 .tnode .tdesc { font-size: .8rem; color: var(--muted); margin-top: 5px; line-height: 1.4; }
 .tnode .arrow { position: absolute; right: -8px; top: 30px; color: var(--line-2); z-index: 2; }
-/* gradient of node colors from easy(green-blue) to hard(red) */
-.tnode:nth-child(1) .lv { background: #4a73c8; }
-.tnode:nth-child(2) .lv { background: #5a8fb0; }
-.tnode:nth-child(3) .lv { background: #5fa58f; }
-.tnode:nth-child(4) .lv { background: #8a9b5a; }
-.tnode:nth-child(5) .lv { background: #d8923f; }
-.tnode:nth-child(6) .lv { background: #cf6f55; }
-.tnode:nth-child(7) .lv { background: #c1504e; }
+/* dopamine arc: lavender (easy) → through candy tones → rose (hard) */
+.tnode:nth-child(1) .lv { background: #8b7cf0; }
+.tnode:nth-child(2) .lv { background: #6aa9e9; }
+.tnode:nth-child(3) .lv { background: #4fc4b8; }
+.tnode:nth-child(4) .lv { background: #9ccf5f; }
+.tnode:nth-child(5) .lv { background: #f6c453; }
+.tnode:nth-child(6) .lv { background: #f49261; }
+.tnode:nth-child(7) .lv { background: #ee6f9b; }
 .tree-note { font-size: .9rem; color: var(--muted); margin-top: 16px; font-family: var(--font-mono); letter-spacing: .02em; }
 
 /* score scales row */
