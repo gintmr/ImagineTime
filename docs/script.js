@@ -90,6 +90,22 @@
       if (img) openLightbox(img.getAttribute("src"), card.getAttribute("data-cap") || img.getAttribute("alt"));
     });
   });
+  /* ---------- domain filter ---------- */
+  var filterWrap = document.getElementById("gal-filter");
+  if (filterWrap) {
+    filterWrap.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b) return;
+      var d = b.getAttribute("data-domain");
+      filterWrap.querySelectorAll("button").forEach(function (x) {
+        x.classList.toggle("active", x === b);
+      });
+      document.querySelectorAll("#domain-gallery .gcard").forEach(function (c) {
+        c.classList.toggle("hide", d !== "all" && c.getAttribute("data-domain") !== d);
+      });
+    });
+  }
+
   if (lbClose) lbClose.addEventListener("click", closeLightbox);
   if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLightbox(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLightbox(); });

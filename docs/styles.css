@@ -358,7 +358,20 @@ section.block.tight { padding: 64px 0; }
   padding: 12px 16px; font-size: .86rem; color: var(--ink-2);
   border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 10px;
 }
-.gcard .gcap .tag { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); }
+.gcard .gcap span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gcard .gcap .tag { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); white-space: nowrap; flex: none; }
+
+/* domain filter bar */
+.gal-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+.gal-filter button {
+  font-family: var(--font-mono); font-size: .73rem; letter-spacing: .02em;
+  border: 1px solid var(--line-2); background: var(--panel); color: var(--ink-2);
+  padding: 6px 13px; border-radius: 999px; cursor: pointer;
+  transition: background .12s ease, color .12s ease, border-color .12s ease;
+}
+.gal-filter button:hover { color: var(--ink); border-color: var(--ink); }
+.gal-filter button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.gcard.hide { display: none; }
 
 /* ============================================================
    CITATION
