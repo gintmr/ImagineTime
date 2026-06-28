@@ -175,13 +175,22 @@ header.nav {
 .teaser-panel { margin-top: 44px; }
 .teaser-panel img { width: 100%; }
 
-/* PDF paper preview */
+/* PDF paper preview — constrained to a centered, paper-proportioned column */
+.pdf-panel { max-width: 880px; margin-left: auto; margin-right: auto; }
 .pdf-panel .panel-head .r { text-transform: none; letter-spacing: .02em; }
 .pdf-panel .panel-head a { color: var(--accent); }
 .pdf-panel .panel-head a:hover { color: var(--accent-2); }
 .pdf-embed { background: #525659; }
-.pdf-embed iframe { width: 100%; height: 86vh; min-height: 540px; border: 0; display: block; }
-@media (max-width: 560px) { .pdf-embed iframe { height: 72vh; } }
+.pdf-embed iframe {
+  width: 100%;
+  aspect-ratio: 8.5 / 11;   /* US-Letter page proportion */
+  height: auto;
+  border: 0; display: block;
+}
+/* fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 1) {
+  .pdf-embed iframe { height: 1140px; }
+}
 
 /* ============================================================
    STATS BAND
