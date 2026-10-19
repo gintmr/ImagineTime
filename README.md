@@ -1,6 +1,6 @@
 <div align="center">
 
-**🎉 Accepted to WACV 2027!**
+**🎉 Congratulations! Accepted to WACV 2027 — October 15, 2026**
 
 # Can Image Models Imagine Time?
 
