@@ -1,5 +1,7 @@
 <div align="center">
 
+**🎉 Accepted to WACV 2027!**
+
 # Can Image Models Imagine Time?
 
 ### ImageTime — A Benchmark for Probing Visual World Modeling Through Spatiotemporal Consistency
